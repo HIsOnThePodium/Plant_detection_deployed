@@ -1,10 +1,7 @@
 import os
 import csv
+import requests
 from flask import Flask, render_template, request
-from PIL import Image
-import numpy as np
-import torch
-import CNN
 
 # ================== READ CSV (NO PANDAS) ==================
 def read_csv_dicts(path):
@@ -14,27 +11,8 @@ def read_csv_dicts(path):
 disease_info = read_csv_dicts("disease_info.csv")
 supplement_info = read_csv_dicts("supplement_info.csv")
 
-# ================== LOAD MODEL ==================
-model = CNN.CNN(39)
-state = torch.load("plant_disease_model_1_latest.pt", map_location="cpu")
-model.load_state_dict(state)
-model.eval()
-
-# (optional) giảm RAM thêm chút
-torch.set_num_threads(1)
-
-# ================== PREDICTION ==================
-def prediction(image_path):
-    image = Image.open(image_path).convert("RGB").resize((224, 224))
-
-    # PIL -> numpy float32 -> torch tensor (1,3,224,224)
-    arr = np.array(image, dtype=np.float32) / 255.0   # H,W,C
-    arr = np.transpose(arr, (2, 0, 1))                # C,H,W
-    input_data = torch.from_numpy(arr).unsqueeze(0)   # 1,C,H,W
-
-    with torch.no_grad():
-        output = model(input_data)
-        return int(torch.argmax(output).item())
+# ================== HUGGING FACE API ==================
+HF_PREDICT_URL = "https://dogiahien-model.hf.space/predict"
 
 # ================== FLASK APP ==================
 app = Flask(__name__)
@@ -57,6 +35,7 @@ def mobile_device_detected_page():
 
 @app.route("/submit", methods=["POST"])
 def submit():
+    # HTML input của bạn đang name="image"
     image = request.files["image"]
     filename = image.filename
 
@@ -66,8 +45,16 @@ def submit():
     file_path = os.path.join(upload_dir, filename)
     image.save(file_path)
 
-    pred = prediction(file_path)
+    # ===== gọi HuggingFace để predict =====
+    image.stream.seek(0)  # reset con trỏ đọc file
+    files = {"file": (filename, image.read(), image.mimetype or "image/jpeg")}
+    resp = requests.post(HF_PREDICT_URL, files=files, timeout=60)
+    data = resp.json()
 
+    # HF trả: {"pred_idx":..., "pred_label":..., "confidence":...}
+    pred = int(data["pred_idx"])
+
+    # ===== phần dưới giữ nguyên logic của bạn =====
     title = disease_info[pred]["disease_name"]
     description = disease_info[pred]["description"]
     prevent = disease_info[pred]["Possible Steps"]
