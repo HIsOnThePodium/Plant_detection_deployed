@@ -1,0 +1,443 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation-Introduce #1*/
+.Navigation-Introduce_wrap {
+  background: rgb(85, 119, 89);
+  background: linear-gradient(
+    180deg,
+    rgba(85, 119, 89, 1) 16%,
+    rgba(95, 130, 91, 1) 32%,
+    rgba(120, 152, 108, 1) 50%,
+    rgba(154, 192, 131, 1) 100%
+  );
+  width: 100%;
+  height: 595px;
+}
+
+/* Navigation */
+.Navigation_container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Navigation-button_container {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 500px;
+  height: 50px;
+}
+.Navigation-button {
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+.Navigation-button:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+.Website-name {
+  color: white;
+  font-family: Lobster Two;
+  font-size: 33px;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Navigation-SignIn_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+}
+.SignIn-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  width: 150px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-right: 20px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.SignIn-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Introduce */
+.Introduce_wrap {
+  width: 100%;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Introduce_container {
+  display: flex;
+}
+.Introduce-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 200px;
+  color: white;
+  font-family: Roboto;
+}
+.Introduce-Heading {
+  margin-bottom: 20px;
+  font-family: Bebas Neue;
+  font-size: 50px;
+}
+.Introduce-image {
+  height: 200px;
+}
+.custom-shape-divider-bottom-1715692097 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1715692097 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 109px;
+}
+
+.custom-shape-divider-bottom-1715692097 .shape-fill {
+  fill: #c6f5aa;
+}
+
+/* Body and content #2 */
+
+/* Instruction */
+.Instruction_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 550px;
+  background: white;
+}
+.Instruction-heading {
+  font-family: Bebas Neue;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+.Instruction-paragraph {
+  font-family: Roboto;
+  text-align: center;
+  width: 600px;
+  margin-bottom: 50px;
+}
+.Instruction_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.Instruction-box {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Instruction-img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 50px;
+}
+.Instruction-box-heading {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: Roboto;
+}
+.Instruction-box-heading-junior {
+  margin-bottom: 10.5px;
+  font-size: 20px;
+  font-family: Roboto;
+}
+.Instruction-box-paragraph {
+  font-family: Roboto;
+  text-align: center;
+}
+#Instruction-box-hightlight-Plantix {
+  color: #009e60;
+  font-family: Lobster Two;
+  font-size: 20px;
+}
+#Instruction-box-hightlight-Magic {
+  background: linear-gradient(
+    to right,
+    #9900f0 25%,
+    #ca00f0 50%,
+    #f000e6 75%,
+    #f000b6 100%
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 20px;
+  font-family: Dancing Script;
+  font-weight: 700;
+}
+
+/* Submit */
+.Submit_wrap {
+  background: #a0b698;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Submit_container {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+.Submit-article {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.Submit-heading {
+  font-family: Bebas Neue;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+.Submit-paragraph {
+  font-family: Roboto;
+}
+.name {
+  font-family: Roboto;
+}
+::selection {
+  color: #fff;
+  background: #a0b698;
+}
+.Submit-box_container {
+  width: 430px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+}
+.Submit-box_container header {
+  font-family: Roboto;
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+.Submit-box_container form {
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #a0b698;
+}
+form :where(i, p) {
+  color: #a0b698;
+}
+form i {
+  font-size: 50px;
+  font-family: Roboto;
+}
+form p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: black;
+  font-family: Roboto;
+}
+
+section .row {
+  margin-bottom: 10px;
+  background: #e9f0ff;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .row i {
+  color: #a0b698;
+  font-size: 30px;
+}
+section .details span {
+  font-size: 14px;
+}
+.progress-area .row .content {
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar {
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: #a0b698;
+  border-radius: inherit;
+}
+.uploaded-area {
+  max-height: 232px;
+  overflow-y: scroll;
+}
+.uploaded-area.onprogress {
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar {
+  width: 0px;
+}
+.uploaded-area .row .content {
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size {
+  font-family: Roboto;
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check {
+  font-size: 16px;
+}
+
+/* Footer */
+.Footer_wrap {
+  width: 100%;
+  height: 325px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Footer-name {
+  color: #5f825b;
+  font-family: Lobster Two;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.Footer-button_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 25px;
+}
+.Footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  transition: width 0.3s ease-in-out;
+}
+.Footer-button-content:hover {
+  cursor: pointer;
+  color: #5f825b;
+  position: relative;
+}
+.Footer-button-content::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #5f825b;
+  transition: width 0.3s ease-in-out;
+}
+.Footer-button-content:hover:after {
+  width: 100%;
+}
+.Footer-contacts_container {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+.Footer-button-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #5f825b;
+  transition: all 0.3s ease-in-out;
+}
+.Footer-button-contacts:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+.Footer-button-icon {
+  height: 40px;
+}
+.Footer-line {
+  width: 100%;
+  height: 2px;
+  background-color: #5f825b;
+  margin-bottom: 25px;
+}
+.Footer-made {
+  font-family: Roboto;
+}
+

@@ -1,0 +1,74 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plantix Magic
+{% endblock pagetitle %}
+
+{% block body %}
+<div>
+    <div class="container">
+        <!-- For demo purpose -->
+        <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍀Magic Engine🍀</b></h1>
+                <p class="lead" style="font-weight: 500;color: black;">Let Plantix Magic Engine Will Help You To Detect Disease</p>
+            </div>
+        </div>
+        <!-- End -->
+        <div class="row ">
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+
+                    <h5><b>Why is it necessary to detect disease in plant ?</b></h5>
+                    <p><strong>Crop Loss Prevention:</strong> Each year, plant viruses and fungal attacks lead to crop losses of up to 30%. By identifying diseases early, farmers can take timely action to prevent further spread and minimize damage.</p>
+                    <p><strong>Timely Intervention:</strong> When a disease becomes visible, it is often too late to counteract the damage. Early detection allows farmers to intervene promptly, whether through targeted treatments, adjusting irrigation, or other management practices.</p>
+                    <p><strong>Cost-Effective Measures:</strong> Traditional laboratory tests for disease detection are expensive and time-consuming. Researchers are now developing low-cost, on-site quick tests that provide farmers with immediate results. These tests help save resources and enable timely decision-making.</p>
+                    <p><strong>Food Security:</strong> Plant diseases can devastate entire crops, affecting food availability and prices. Detecting diseases early helps maintain food security by ensuring stable crop yields.</p>
+                    <p><strong>Environmental Impact:</strong> Effective disease management reduces the need for excessive pesticide use,  minimizing environmental pollution and promoting sustainable agriculture. </p>
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;"><img
+                        src="https://www.pngjoy.com/pngl/250/4840262_plants-png-indoors-tropical-plant-png-hd-png.png "
+                        height="300" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+
+                    <!-- Default bootstrap file upload-->
+
+                    <form action="/submit" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file overflow-hidden mb-4" style="text-align: center;">
+                            <input type="file" id="actual-btn" hidden name="image" />
+                            <label for="actual-btn" style="color: rgb(226, 94, 94); text-align: center;">Choose File</label>
+                            <span id="file-chosen">No file chosen</span>
+                        </div>
+
+                        <!-- End -->
+
+                        <h6 class="text-center mb-4 text-muted">
+                            Simply upload your plant's leaf image and then see the magic of AI.
+                        </h6>
+
+                        <!-- Custom bootstrap upload file-->
+                        <center>
+                            <a class="mx-2"><button type="submit" class="btn btn-outline-success">Submit</button></a>
+                        </center>
+                    </form>
+                    <!-- End -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    })
+</script>
+
+{% endblock body %}

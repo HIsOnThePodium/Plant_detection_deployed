@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/reset.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css">
+
+    <title> {% block pagetitle %}
+
+        {% endblock pagetitle %}</title>
+    <style>
+        .bg {
+
+            background-image: url("images/background.jpeg");
+
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .file-upload input[type='file'] {
+            display: none;
+        }
+
+        body {
+            background-color:  rgb(153, 207, 159);
+            /* background: -webkit-linear-gradient(to right, #66a776, #043610);
+            background: linear-gradient(to right, #5d9c6a, #059b0d); */
+            height: 100vh;
+        }
+
+        .rounded-lg {
+            border-radius: 1rem;
+        }
+
+        .custom-file-label.rounded-pill {
+            border-radius: 50rem;
+        }
+
+        .custom-file-label.rounded-pill::after {
+            border-radius: 0 50rem 50rem 0;
+        }
+
+        label {
+            background-color: rgb(60, 247, 116);
+            color: white;
+            padding: 0.5rem;
+            font-family: sans-serif;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        #file-chosen {
+            margin-left: 0.3rem;
+            font-family: sans-serif;
+        }
+
+        .footer-basic {
+            padding: 40px 0;
+            background-color: #042908;
+            color: #f1f3f5;
+        }
+
+        .footer-basic ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .footer-basic li {
+            padding: 0 10px;
+        }
+
+        .footer-basic ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .footer-basic ul a:hover {
+            opacity: 1;
+        }
+
+        .footer-basic .social {
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+        .footer-basic .social>a {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin: 0 8px;
+            color: inherit;
+            opacity: 0.75;
+        }
+
+        .footer-basic .social>a:hover {
+            opacity: 0.9;
+        }
+
+        .footer-basic .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+  <div class="Navigation-Introduce_wrap">
+    <!-- Navigation container started -->
+    <div class="Navigation_container">
+      <div class="Navigation-button_container">
+        <a href="{{url_for('home_page')}}">
+          <div class="Navigation-button">
+            <b>About</b>
+          </div>
+        </a>
+        <a href="#Instruction">
+          <div class="Navigation-button">
+            <b>Instruction</b>
+          </div>
+        </a>
+        <a href="{{url_for('ai_engine_page')}}" target="_blank">
+          <div class="Navigation-button"><b>Magic</b></div>
+        </a>
+        <a href="#Footer">
+          <div class="Navigation-button">
+            <b>Contact</b>
+          </div>
+        </a>
+      </div>
+
+      <div class="Website-name">Plantix's magic</div>
+    </div>
+    <!-- Navigation container end -->
+
+    <!-- Introduce started -->
+    <div class="Introduce_wrap">
+      <div class="Introduce_container">
+        <div class="Introduce-content">
+          <h1 class="Introduce-Heading">
+            Optimize Your Harvests: Elevate Crop Quality and Yield!
+          </h1>
+          <p>
+            Hien's innovative website assists in identifying and
+            managing plant pests, promoting effective plant protection and
+            growth.
+          </p>
+        </div>
+        <img src="../static/Images/IMG_3914 (1).PNG" alt="" class="Introduce-image" />
+      </div>
+    </div>
+    <!-- Introduce end -->
+  </div>
+
+  <!-- Navigation & Introduce end -->
+
+  <!-- Body and content started-->
+  <div class="Body-content_wrap">
+    <!-- Instruction started -->
+    <section id="Instruction">
+      <div class="Instruction_wrap">
+        <h1 class="Instruction-heading">HOW TO USE IT?</h1>
+        <p class="Instruction-paragraph">
+          Follow these steps to effectively utilize "Plantix's Magic": Read
+          the instructions carefully, apply accordingly, and observe results
+        </p>
+        <div class="Instruction_container">
+          <div class="Instruction-box">
+            <img
+              src="../static/Images/camera-viewfinder.png"
+              alt=""
+              class="Instruction-img"
+            />
+            <b class="Instruction-box-heading">Step 1</b>
+            <p class="Instruction-box-paragraph">Take photos of your crops</p>
+          </div>
+          <div class="Instruction-box">
+            <img src="../static/Images/add-image.png" alt="" class="Instruction-img" />
+            <b class="Instruction-box-heading">Step 2</b>
+            <p class="Instruction-box-paragraph">Upload your photos</p>
+          </div>
+          <div class="Instruction-box">
+            <img
+              src="../static/Images/microchip-ai (1).png"
+              alt=""
+              class="Instruction-img"
+            />
+            <b class="Instruction-box-heading-junior">Step 3</b>
+            <p class="Instruction-box-paragraph">
+              Let
+              <b
+                class="Instruction-box-hightlight"
+                id="Instruction-box-hightlight-Plantix"
+                >Plantix
+              </b>
+              work its
+              <b
+                class="Instruction-box-hightlight"
+                id="Instruction-box-hightlight-Magic"
+              >
+                Magic
+              </b>
+            </p>
+          </div>
+          <div class="Instruction-box">
+            <img src="../static/Images/wheat.png" alt="" class="Instruction-img" />
+            <b class="Instruction-box-heading">Step 4</b>
+            <p class="Instruction-box-paragraph">
+              Sit tight and enjoy the results
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Instruction end -->
+  </div>
+  <!-- Body and content end -->
+    {% block body %}
+
+    {% endblock body %}
+    <!-- Footer started-->
+    <section id="Footer">
+        <div class="Footer_wrap">
+          <div class="Footer-name">Plantix's magic</div>
+          <div class="Footer-button_container">
+            <div class="Footer-button">
+              <b class="Footer-button-content">Home</b>
+            </div>
+            <div class="Footer-button">
+              <b class="Footer-button-content">About</b>
+            </div>
+            <div class="Footer-button">
+              <b class="Footer-button-content">Service</b>
+            </div>
+            <div class="Footer-button">
+              <b class="Footer-button-content">Magic</b>
+            </div>
+          </div>
+          <div class="Footer-contacts_container">
+            <div class="Footer-button-contacts">
+              <img
+                src="../static/Images/Icon_facebook.png"
+                alt=""
+                class="Footer-button-icon"
+              />
+            </div>
+            <div class="Footer-button-contacts">
+              <img
+                src="../static/Images/Icon_instagram.png"
+                alt=""
+                class="Footer-button-icon"
+              />
+            </div>
+            <div class="Footer-button-contacts">
+              <img
+                src="../static/Images/Icon_twitter.png"
+                alt=""
+                class="Footer-button-icon"
+              />
+            </div>
+            <div class="Footer-button-contacts">
+              <img
+                src="../static/Images/Icon_youtube.png"
+                alt=""
+                class="Footer-button-icon"
+              />
+            </div>
+          </div>
+          <div class="Footer-line"></div>
+          <div class="Footer-made">Website by Hien</div>
+        </div>
+      </section>
+      <!-- Footer end -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const footerSection = document.getElementById('Footer');
+        footerSection.addEventListener('click', redirectToContact);
+    
+        function redirectToContact() {
+            // Chuyển hướng đến đường dẫn 'contact'
+            window.location.href = "{{url_for('contact')}}";
+        }
+    </script>
+</body>
+</html>
